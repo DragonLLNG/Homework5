@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Homework5</string>
+    <string name="generate">Generate</string>
+    <string name="selectComplexity">Select Complexity</string>
+    <string name="time"># time</string>
+    <string name="average">Averrage: #</string>
+    <string name="retrievedNumber">#/#</string>
+</resources>

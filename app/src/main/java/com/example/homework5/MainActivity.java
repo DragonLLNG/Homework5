@@ -52,6 +52,11 @@ public class MainActivity extends AppCompatActivity{
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (numbers.size() != 0) {
+                    ListView numsLv = findViewById(R.id.listView);
+                    numsLv.clearChoices();
+                    numbers.clear();
+                }
                 threadPool.execute(new DoWork());
 
             }

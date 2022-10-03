@@ -88,6 +88,20 @@ public class MainActivity extends AppCompatActivity{
                         else{
                             progBar.setProgress(newInt * (100 / storedComplexity));
                         }
+                        double averageValue = 0;
+                        double sum = 0;
+
+                        if(numbers.size() > 0){
+                            for ( int i=0; i < numbers.size() ; i++) {
+                                // assuming the product class has a price
+                                sum += numbers.get(i);
+                            }
+                            averageValue = (sum / (double)numbers.size());
+                        }
+
+                        TextView average = findViewById(R.id.averageTextview);
+                        average.setText("Average: "+ averageValue);
+
                         ArrayAdapter<Double> numAdapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1,numbers);
                         ListView numsLv = findViewById(R.id.listView);
                         numsLv.setAdapter(numAdapter);
